@@ -9,16 +9,9 @@ loadQuote();
 // show quote on our website through function call 
 // function declaration 
 function showQuote(data) {
-    const section = document.getElementById('quote-section');
-    const div = document.createElement('div');
-    div.innerHTML = `
-    <h2>Today's Quote</h2>
-    <figure class="quote">
-    <blockquote  cite="https://kanye.rest/">
-        <p >${data.quote}</p>
-    </blockquote>
-    <figcaption>—Kanye West</figcaption>
-</figure>
-    `
-    section.appendChild(div);
+    const quote = document.getElementById('quote');
+    const p = document.createElement('p');
+    p.innerText = data.quote;
+    quote.appendChild(p);
+    console.log(p);
 }
